@@ -1,0 +1,74 @@
+{
+    "identifier": "com.burtsev.nova-ruby-debugger",
+    "name": "Ruby Debugger",
+    "author": "Sergey Burtsev",
+    "organization": "Sergey Burtsev",
+    "description": "Ruby debugger to connect Nova editor to debug library.",
+    "version": "0.1",
+
+    "main": "main.js",
+
+    "activationEvents": [
+        "onLanguage:ruby"
+    ],
+
+    "breakpoints": [
+        {
+            "syntax": "ruby"
+        }
+    ],
+
+    "debugAdapters": {
+        "rdbg": {
+            "name": "Ruby Debug",
+            "image": "ruby-logo"
+        }
+    },
+
+    "taskTemplates": {
+        "rubyRemoteDebug": {
+            "name": "Ruby Remote Debug",
+            "description": "Attach to running rdbg server to debug Ruby scripts and apps.",
+            "image": "ruby-logo",
+            "tasks": {
+                "run": {
+                    "resolve": "ruby-debugger",
+                }
+            },
+            "config": [
+                {
+                    "key": "rdbg.host",
+                    "title": "Host",
+                    "description": "The hostname or IP address of a remote server on which rdbg is listening for connections.",
+                    "type": "string",
+                    "placeholder": "localhost",
+                    "default": "localhost"
+                },
+                {
+                    "key": "rdbg.port",
+                    "title": "Port",
+                    "description": "The port on which rdbg is listening for connections.",
+                    "type": "number",
+                    "min": 1024,
+                    "max": 65535,
+                    "default": 8989
+                }
+            ]
+        }
+    },
+
+    "keywords": [
+        "ruby",
+        "rails",
+        "rdbg",
+        "debug",
+    ],
+
+    "repository": "https://github.com/SergeyBurtsev/nova-ruby-debugger",
+    "homepage": "https://github.com/SergeyBurtsev/nova-ruby-debugger",
+    "bugs": "https://github.com/SergeyBurtsev/nova-ruby-debugger/issues",
+
+    "categories": [
+        "languages"
+    ]
+}
