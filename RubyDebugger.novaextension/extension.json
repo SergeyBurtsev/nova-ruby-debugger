@@ -4,7 +4,7 @@
     "author": "Sergey Burtsev",
     "organization": "Sergey Burtsev",
     "description": "Ruby debugger to connect Nova editor to debug library.",
-    "version": "0.1",
+    "version": "0.2",
 
     "main": "main.js",
 
@@ -32,7 +32,7 @@
             "image": "ruby-logo",
             "tasks": {
                 "run": {
-                    "resolve": "ruby-debugger",
+                    "resolve": "ruby-debugger"
                 }
             },
             "config": [
@@ -61,7 +61,7 @@
         "ruby",
         "rails",
         "rdbg",
-        "debug",
+        "debug"
     ],
 
     "repository": "https://github.com/SergeyBurtsev/nova-ruby-debugger",
